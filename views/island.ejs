@@ -1,0 +1,293 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Island</title>
+		<!-- page icon -->
+		<!--<link rel="icon" type="image/png" href="/favicon.png"/>-->
+		<link rel="icon" type="image/png" href="https://acpocketnews.com/wp-content/uploads/2020/04/Blathers.jpg"/>
+		<!-- include css-->
+		<link rel="stylesheet" href="/styles/island.css">
+		<link rel="stylesheet" href="/styles/main.css">
+		<!-- Bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" id="bootstrap-css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- font link -->
+		<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik:ital,wght@1,300&family=Staatliches&display=swap" rel="stylesheet">
+		<!-- jquery link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js" async></script>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="/"><span class="fa fa-camera-retro"></span> Redd's Arts</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/arts">View Redd's Arts</a></li>
+						<% if(!currentUser){ %>
+						<li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+						<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+						<% } else { %>
+						<li class="nav-item"><a class="nav-link" href="#">Signed In As <%= currentUser.username %></a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container gallery-container">
+			<h1 class ="mb-0">My Island</h1>
+			<p class="page-description text-center mb-0">Apr 2020 - July 2020</p>
+			
+			<div class="gallery">
+				<div class="row">
+					<div class="col-sm-12 col-md-4" data-caption="Image caption">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRZzNU0AYZacm?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRZzNU0AYZacm?format=jpg&name=large" alt="0607">
+						</a>
+						<p class="description">Sylvan Gallery</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRZzMU4AAgGv1?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRZzMU4AAgGv1?format=jpg&name=large" alt="islandpoint">
+						</a>
+						<p class="description">Residential Area</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbAlt8UEAIfz7n?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbAlt8UEAIfz7n?format=jpg&name=large" alt="islandpoint">
+						</a>
+						<p class="description">With Ct, The end of the F world</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbRL9bCWkAA9eio?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbRL9bCWkAA9eio?format=jpg&name=large" alt="test">
+						</a>
+						<p class="description">Flower room</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbRL9a4XQAANY8K?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbRL9a4XQAANY8K?format=jpg&name=large" alt="2ppl">
+						</a>
+						<p class="description">A viewpoint at Ct's Island</p>
+					</div> 
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EVd8rIFUMAIq-MM?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EVd8rIFUMAIq-MM?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">Favorite Pic</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRMWpUYAEoFc8?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRMWpUYAEoFc8?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">ACPS</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubSjZU0AI_tvD?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubSjZU0AI_tvD?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Food Court at Ct's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboR6URU4AAtHY8?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboR6URU4AAtHY8?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Godzilla</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRyKHU0AAPAll?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRyKHU0AAPAll?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Zoo</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EVoJ5bCUEAY8abk?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EVoJ5bCUEAY8abk?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Meteor Shower</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EVd8rItUYAE5XEJ?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EVd8rItUYAE5XEJ?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">With Ct, Nancy</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbAluEU0AARL9s?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbAluEU0AARL9s?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">Bridge wiew with Ct</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EVd8V3GU0AAmvhk?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EVd8V3GU0AAmvhk?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">With Cora, Rua</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EVd8V3EU8AAO8xU?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EVd8V3EU8AAO8xU?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">With Cora, Rua, Dan</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubsJbUYAAIAIT?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubsJbUYAAIAIT?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">Playground at Mushroom's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubsJVU0AEWxlJ?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubsJVU0AEWxlJ?format=jpg&name=large" alt="test">
+						</a>
+						<p class="description">Skeleton at Mushroom's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/Ebubht3VcAUr3p6?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/Ebubht3VcAUr3p6?format=jpg&name=large" alt="2ppl">
+						</a>
+						<p class="description">Fossil garden at Mushroom's Island</p>
+					</div> 
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubsJgUEAAAg6r?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubsJgUEAAAg6r?format=jpg&name=large" alt="2ppl">
+						</a>
+						<p class="description">Able sisters at Mushroom's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/Ebubht0UYAIupsV?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/Ebubht0UYAIupsV?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">Bridge view at Mushroom's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/Ebubht3UMAEVRij?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/Ebubht3UMAEVRij?format=jpg&name=large" alt="wbridge">
+						</a>
+						<p class="description">A viewpoint at Mushroom's Island</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbA9tzUcAEntJ7?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbA9tzUcAEntJ7?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Have a break</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbA9t0UYAEQVVH?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbA9t0UYAEQVVH?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Have a break - 2</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EYZ1qzbU4AspYvL?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EYZ1qzbU4AspYvL?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Highlight</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboR6UcVAAAsu9m?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboR6UcVAAAsu9m?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Waterloo Bridge</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubSjhVcAAzC7v?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubSjhVcAAzC7v?format=jpg&name=large" alt="2ppl">
+						</a>
+						<p class="description">Wedding at Ct's Island</p>
+					</div> 
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubSjMVcAAFuAs?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubSjMVcAAFuAs?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Let's party tonight!</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbubSjaU4AA85Jb?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbubSjaU4AA85Jb?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Hi Blathers!</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRyKHUMAAGtZv?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRyKHUMAAGtZv?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Go hiking with me?</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbA9uSUMAEfglx?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbA9uSUMAEfglx?format=jpg&name=large" alt="0430">
+						</a>
+						<p class="description">A small lane</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbA9uWVcAIl95J?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbA9uWVcAIl95J?format=jpg&name=large" alt="0607">
+						</a>
+						<p class="description">With Ct, Sylvan Library</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRZzPVAAAZEYc?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRZzPVAAAZEYc?format=jpg&name=large" alt="islandpoint">
+						</a>
+						<p class="description">Residential Area - 2</p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EbbAlt7UwAEleYd?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EbbAlt7UwAEleYd?format=jpg&name=large" alt="ibridge">
+						</a>
+						<p class="description">Bridge view</p>
+					</div> 
+					<div class="col-sm-6 col-md-6">
+						<a class="lightbox" href="https://pbs.twimg.com/media/EboRMWbUEAEGlib?format=jpg&name=large">
+							<img src="https://pbs.twimg.com/media/EboRMWbUEAEGlib?format=jpg&name=large" alt="2ppl">
+						</a>
+						<p class="description">Garden</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<footer class="footer-dark">
+			<div class="container">
+				<div class="info">
+					<h3>Credit to Nintendo</h3>
+					<ul><li><a herf="https://www.nintendo.com/games/detail/animal-crossing-new-horizons-switch/">
+						Animal Crossing™: New Horizons</a></li></ul>
+				</div>
+				<div class="col item social">
+					<a href="https://www.linkedin.com/in/jing-shen-547777110/">
+						<span class="iconify" data-icon="ion:logo-linkedin" data-inline="false"></span>
+					</a>
+					<a href="https://github.com/jshen1110/ReddArts">
+						<span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+					</a>
+				</div>
+				<p class="copyright">&copy; 2020 Jing Shen</p>
+			</div>
+		</footer>
+</body>
+</html>

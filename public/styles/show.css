@@ -1,0 +1,56 @@
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+body {
+	padding-top: 3.5em;
+	font-family: 'Font Awesome\ 5 Free', sans-serif;
+	background:url(/documents/loginbg.jpg) fixed;
+	background-size: cover;
+	font:600 16px/18px 'Open Sans',sans-serif;
+	min-height: 100vh;
+}
+
+h2,h3,h4,h5,h6 {
+  font-family: 'Catamaran';
+}
+.back{
+	padding-top: 6em;
+	padding-bottom: 6em;
+	background:rgb(0,0,0);
+    background: transparent\9;
+    background:rgba(0,0,0,0.5);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.4);
+}
+
+
+.img-thumbnail{
+	min-height: 30vh;
+	color: #fff;
+	background: rgba(0,0,0,0.6) !important;
+	border: #fff !important;
+}
+
+
+#display{
+	color:#fff;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+#description{
+	color:#fff;
+	margin: 20px auto;
+    font-size: 18px;
+	font-family: 'Catamaran';
+	font-weight: 800 !important;
+}
+.pull-right .text-right{
+	margin-right:14px;
+}
+

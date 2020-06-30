@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Redd's Arts</title>
+		<!-- page icon -->
+		<!--<link rel="icon" type="image/png" href="/favicon.png"/>-->
+		<link rel="icon" type="image/png" href="https://acpocketnews.com/wp-content/uploads/2020/04/Blathers.jpg"/>
+		<!-- include css-->
+		<link rel="stylesheet" href="/styles/show.css">
+		<link rel="stylesheet" href="/styles/main.css">
+		<!-- Bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" id="bootstrap-css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- font link -->
+		<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik:ital,wght@1,300&family=Staatliches&display=swap" rel="stylesheet">
+		<!-- jquery link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js" async></script>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="/"><span class="fa fa-camera-retro"></span> Redd's Arts</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/arts">View Redd's Arts</a></li>
+						<% if(!currentUser){ %>
+						<li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+						<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+						<% } else { %>
+						<li class="nav-item"><a class="nav-link" href="#">Signed In As <%= currentUser.username %></a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- flash bar-->
+		<div class="container">
+			<% if(error && error.length > 0){ %>
+			<div class="alert alert-danger" role="alert">
+				<%= error %>
+			</div>
+			<% } %>
+			<% if(success && success.length > 0){ %>
+			<div class="alert alert-success" role="alert">
+				<%= success %>
+			</div>
+			<% } %>
+		</div>

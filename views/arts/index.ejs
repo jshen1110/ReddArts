@@ -1,0 +1,130 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Redd's Arts</title>
+		<!-- page icon -->
+		<!--<link rel="icon" type="image/png" href="/favicon.png"/>-->
+		<link rel="icon" type="image/png" href="https://acpocketnews.com/wp-content/uploads/2020/04/Blathers.jpg"/>
+		<!-- include css-->
+		<link rel="stylesheet" href="/styles/index.css">
+		<link rel="stylesheet" href="/styles/main.css">
+		<!-- Bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" id="bootstrap-css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- font link -->
+		<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik:ital,wght@1,300&family=Staatliches&display=swap" rel="stylesheet">
+		<!-- jquery link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js" async></script>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="/"><span class="fa fa-camera-retro"></span> Redd's Arts</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/arts">View Redd's Arts</a></li>
+						<% if(!currentUser){ %>
+						<li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+						<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+						<% } else { %>
+						<li class="nav-item"><a class="nav-link" href="#">Signed In As <%= currentUser.username %></a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div id="flash" class="container">
+			<% if(error && error.length > 0){ %>
+			<div class="alert alert-danger" role="alert">
+				<%= error %>
+			</div>
+			<% } %>
+			<% if(success && success.length > 0){ %>
+			<div class="alert alert-success" role="alert">
+				<%= success %>
+			</div>
+			<% } %>
+		</div>
+		
+		<header class="masthead text-center text-white">
+			<!-- flash bar-->
+			<div class="content">
+				<h1 class="masthead mb-0"><span class="fa fa-camera-retro" ></span>Welcome to Redd's Arts</h1>
+				<h2 class="masthead-subheading mb-2">Let's find Redd Arts in Museum!</h2>
+				<a class="btn btn-primary btn-xl rounded-pill mt-5 pull-right" href="/arts/new">
+					<span class="fa fa-plus" aria-hidden="true" href = "/arts/new">
+					</span> I found a piece of art!</a>
+				<img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/6b/ReddNL.png/revision/latest?cb=20200425083709" class="rounded float-right" alt="Cinque Terre" style="width: 50px">
+			</div>
+		</header> 
+		
+		<div class="back">
+			<div class = "container">
+				<div class="row container text-center gallery-container">
+					<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+						<% arts.forEach(function(art){ %>
+						<div class="col-sm-6 col-md-4">
+							<div class ="img-thumbnail">
+								<img src="<%= art.image %>" class="img-fluid">
+								<div class ="caption">
+									<h5 class ="description mt-2"><%= art.name %></h5>
+									<div>
+										<span class="badge label-primary"><i class="fas fa-thumbs-up"></i> <%= art.likes.length %></span>
+									</div>
+								</div>
+								<p>
+									<a href = "/arts/<%= art._id %>" class="btn btn-primary btn-xl rounded-pill mt-1">More Info</a>
+								</p>
+							</div>
+						</div>
+						<% }); %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer-dark">
+			<div class="container">
+				<div class="info">
+					<h3>Credit to Nintendo</h3>
+					<ul><li><a herf="https://www.nintendo.com/games/detail/animal-crossing-new-horizons-switch/">
+						Animal Crossing™: New Horizons</a></li></ul>
+				</div>
+				<div class="col item social">
+					<a href="https://www.linkedin.com/in/jing-shen-547777110/">
+						<span class="iconify" data-icon="ion:logo-linkedin" data-inline="false"></span>
+					</a>
+					<a href="https://github.com/jshen1110/">
+						<span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+					</a>
+				</div>
+				<p class="copyright">&copy; 2020 Jing Shen</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

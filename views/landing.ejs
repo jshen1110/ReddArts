@@ -1,0 +1,152 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above HEAD tag ---------->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Redd's Arts</title>
+		<!-- page icon -->
+		<!--<link rel="icon" type="image/png" href="/favicon.png"/>-->
+		<link rel="icon" type="image/png" href="https://acpocketnews.com/wp-content/uploads/2020/04/Blathers.jpg"/>
+		<!-- include css-->
+		<link rel="stylesheet" href="/styles/landing.css">
+		<link rel="stylesheet" href="/styles/main.css">
+		<!-- Bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" id="bootstrap-css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- font link -->
+		<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik:ital,wght@1,300&family=Staatliches&display=swap" rel="stylesheet">
+		<!-- jquery link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js" async></script>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="/"><span class="fa fa-camera-retro"></span> Redd's Arts</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/arts">View Redd's Arts</a></li>
+						<% if(!currentUser){ %>
+						<li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+						<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+						<% } else { %>
+						<li class="nav-item"><a class="nav-link" href="#">Signed In As <%= currentUser.username %></a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="wrapper">
+			<header class="masthead text-center text-white">
+				<div class="content">
+					<div class="nextpage">
+						<h1 class="masthead-heading mb-0">View Redd's Arts</h1>
+						<h2 class="masthead-subheading mb-0">Know more about those famous works</h2>
+						<a href="/arts" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+					</div>
+				</div>
+			</header> 
+
+			
+			<section>
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 order-lg-2">
+							<div class="p-5">
+								<!--img class="img-fluid rounded-circle" src="https://pbs.twimg.com/media/EbAvPPFUEAAyuDi?format=jpg&name=large" alt="" -->
+								<img class="img-fluid rounded-circle" src="/documents/landing1.jpeg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 order-lg-1">
+							<div class="p-5">
+								<h2 class="display-4">Jolly Redd's Arts</h2>
+								<p>In Animal Crossing, a merchant named Jolly Redd sells various works of art - comprised of paintings, sculptures, but also fake art as well.. Blathers will accpect genuine art pieces for donations to the Museum.</p>
+								<a href="/arts" class="btn btn-primary btn-xl rounded-pill mt-3">Let's Go</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<div class="p-5">
+								<!--img class="img-fluid rounded-circle" src="http://www.egyptian-museum-berlin.com/bilder/g_n_nofretete_02.jpg" alt=""-->
+								<img class="img-fluid rounded-circle" src="/documents/landingPic2.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="p-5">
+								<h2 class="display-4">Famous Works</h2>
+								<p>Many of these are directly referenced from famous works of art all over the world. Next is a list of genuine know Works of Art that Redd sells. Included the name of the actual artwork is based on, the information of the item, the actual artwork's Location and Images.</p>
+								<a href="/arts" class="btn btn-primary btn-xl rounded-pill mt-3">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 order-lg-2">
+							<div class="p-5">
+								<!--img class="img-fluid rounded-circle" src="https://pbs.twimg.com/media/EbAvPPFUEAAyuDi?format=jpg&name=large" alt="" -->
+								<img class="img-fluid rounded-circle" src="/documents/landingPic3.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 order-lg-1">
+							<div class="p-5">
+								<h2 class="display-4">View My Island</h2>
+								<p>Here are some pictures and stories happened on my island!</p>
+								<a href="/island" class="btn btn-primary btn-xl rounded-pill mt-3">Go Visit!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<!-- Footer -->
+		<footer class="footer-dark">
+			<div class="container">
+				<div class="info">
+					<h3>Credit to Nintendo</h3>
+					<ul><li><a herf="https://www.nintendo.com/games/detail/animal-crossing-new-horizons-switch/">
+						Animal Crossing™: New Horizons</a></li></ul>
+				</div>
+				<div class="col item social">
+					<a href="https://www.linkedin.com/in/jing-shen-547777110/">
+						<span class="iconify" data-icon="ion:logo-linkedin" data-inline="false"></span>
+					</a>
+					<a href="https://github.com/jshen1110/ReddArts">
+						<span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+					</a>
+				</div>
+				<p class="copyright">&copy; 2020 Jing Shen</p>
+			</div>
+		</footer>
+  </body>
+</html>
