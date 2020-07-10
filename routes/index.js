@@ -30,14 +30,14 @@ router.post("/register", function(req, res){
 	var newUser = new User({username: req.body.username});
 	if(req.body.adminCode === '2020') {
 		newUser.isAdmin = true;
-    }
+	}
 	User.register(newUser, req.body.password, function(err, user){
 		if(err){
 			console.log(err);
 			return res.render("register", {error: err.message});
         }
 		passport.authenticate("local")(req, res, function(){
-			req.flash("success", "Successfully Signed up! Nice to meet you! " + user.body.username);
+			req.flash("success", "Successfully Signed up! Nice to meet you! ");
 			res.redirect("/arts"); 
 		});
 	});
