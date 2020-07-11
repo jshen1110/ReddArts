@@ -19,6 +19,9 @@ And trying to buy more artworks from Redd!
 
 Intro page - Main page - Artwork Show page - My island
 
+<a href="https://ibb.co/7v1CMFc"><img src="https://i.ibb.co/1ZmQyxV/Evaporating-cloud.png" alt="Evaporating-cloud" border="0"></a>
+
+
 ## [Quick intro of Jolly Redd and his "ARTS"](/views/landing.ejs)
 Quick preview of Redd's arts and famous work in reality.
 
@@ -31,15 +34,15 @@ If you have more arts bought from Redd, add your arts!
 
 ## [More info about a piece of Artwork](/views/arts/show.ejs)
 - [x] Information about this piece of Artwrok in Balthers Museum
-- [x] Current Location (inclued map)
+- [x] Current Location (include map)
 - [x] Museum's Ticket Price
 - [x] [Others comments and likes](/views/comments/)
 
-example picture 
+Example Pic 
 
 <a href="https://ibb.co/xFm9pgC"><img src="https://i.ibb.co/NT1D8NV/show.png" alt="show" border="0"></a>
 
-example gif
+Example GIF
 
 ![Recordit GIF](http://g.recordit.co/mbZbfgbBBG.gif)
 
@@ -47,6 +50,10 @@ example gif
 Gallery of my Island and my friends's Islands. Trust me! It's beautiful!
 
 <a href="https://ibb.co/p070vCj"><img src="https://i.ibb.co/h767RpF/island.png" alt="island" border="0"></a>
+
+GIF view
+
+![Recordit GIF](http://g.recordit.co/hKMJeug5OI.gif)
 
 
 ## Other Info
